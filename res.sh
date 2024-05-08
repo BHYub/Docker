@@ -8,7 +8,7 @@
 
 
 #créer un réseau docker "eznet" en (bridge) @réseau : 192.168.2.0/24
-docker network create eznet
+docker network create  --driver=bridge --subnet=192.168.2.0/24 eznet
 
 #créer 2 containers docker de ubuntu dans le réseau eznet qui peuvent se ping
 for n in 1 2 
